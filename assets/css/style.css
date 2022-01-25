@@ -33,6 +33,7 @@ nav {
   background-color: #0071a5;
   position: fixed;
   width: 100%;
+  z-index: 9999;
 }
 
 ul#menu li i {
@@ -167,6 +168,16 @@ section#inscrevase form button{
   transition: all .2s ease-in-out;
 }
 
+.buttonDisable {
+  border: solid 2px gray !important;
+  color: gray !important;
+}
+
+.buttonDisable:hover{
+  color: #fff !important;
+  background-color: gray !important;
+}
+
 section#inscrevase form button:hover{
   color: #fff;
   background-color: #0071a5;
@@ -200,4 +211,19 @@ footer a{
 
 footer a:hover{
   color: rgb(252, 175, 255);
+}
+
+
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-anime="up"] {
+  transform: translate3d(0, 100%, 0)
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0)
 }
